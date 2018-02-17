@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UIKit;
 
-namespace Styleable.Xamarin.iOS
+namespace Styleable.Xamarin.iOS.TestApp
 {
     //move to test app project
     public class TestStylesheet : IStylesheet
