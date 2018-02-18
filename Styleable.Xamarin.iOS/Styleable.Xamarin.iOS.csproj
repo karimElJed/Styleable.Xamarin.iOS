@@ -44,9 +44,11 @@
     <Compile Include="IStyle.cs" />
     <Compile Include="IStyleable.cs" />
     <Compile Include="Style.cs" />
-    <Compile Include="StyleableUILabel.cs" />
+    <Compile Include="StyleableExtensions.cs" />
+    <Compile Include="Views\StyleableUILabel.cs" />
     <Compile Include="IStylesheet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\StyleableUITextField.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
