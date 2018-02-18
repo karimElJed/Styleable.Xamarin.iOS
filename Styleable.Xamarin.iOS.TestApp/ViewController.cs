@@ -8,6 +8,7 @@ namespace Styleable.Xamarin.iOS.TestApp
     {
         public ViewController(IntPtr handle) : base(handle)
         {
+            //StyleManager.SetActiveStylesheet(new TestStylesheet());
         }
 
         public override void ViewDidLoad()

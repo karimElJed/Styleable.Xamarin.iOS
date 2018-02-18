@@ -87,10 +87,16 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <None Include="Info.plist" />
+    <Compile Include="MyTestViewController.cs" />
+    <Compile Include="MyTestViewController.designer.cs">
+      <DependentUpon>MyTestViewController.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <InterfaceDefinition Include="TestView.xib" />
+    <InterfaceDefinition Include="MyTestViewController.xib" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="StylableView.cs" />
     <Compile Include="TestStylesheet.cs" />
     <Compile Include="ViewController.designer.cs">
       <DependentUpon>ViewController.cs</DependentUpon>

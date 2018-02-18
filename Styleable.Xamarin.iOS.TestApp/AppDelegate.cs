@@ -1,4 +1,5 @@
-﻿using Foundation;
+﻿using System;
+using Foundation;
 using UIKit;
 
 namespace Styleable.Xamarin.iOS.TestApp
@@ -17,10 +18,9 @@ namespace Styleable.Xamarin.iOS.TestApp
             set;
         }
 
+        
         public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
-            StyleManager.SetActiveStylesheet(new TestStylesheet());
-
             return true;
         }
 

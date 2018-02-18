@@ -22,20 +22,33 @@ namespace Styleable.Xamarin.iOS
         public override void AwakeFromNib()
         {
             base.AwakeFromNib();
+
             ApplyStyles();
+            
         }
         
 
         private void ApplyStyles()
         {
-            var member = this.GetType().GetProperty("BackgroundColor");
-            member?.SetValue(this, UIColor.Green);
-
             //todo: implement a generic extension?
-            var stylesheet = StyleManager.Stylesheet;
+            if (String.IsNullOrWhiteSpace(StyleName))  return;
+
+            UIView parent = this.Superview;
+            while (parent != null && !(parent is IRootView))
+            {
+                parent = parent.Superview;
+            }
+
+            IStylesheet stylesheet = null;
+            if (parent is IRootView root)
+            {
+                stylesheet = root.Stylesheet;
+            }
 
             if (stylesheet == null) return;
 
+            //todo: refactor
+            //todo: performance?
 
             IStyle<IStyleable> style;
             stylesheet.Styles.TryGetValue(StyleName, out style);
@@ -44,10 +57,9 @@ namespace Styleable.Xamarin.iOS
 
             if (uiStyle == null) return;
             
-            uiStyle.SetColor(this);
             foreach (var styling in uiStyle.Stylings) 
             {
-                //styling(this);                
+                styling(this);
             }
         }        
     }

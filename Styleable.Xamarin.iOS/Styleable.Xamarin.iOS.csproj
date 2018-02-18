@@ -40,12 +40,12 @@
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IRootView.cs" />
     <Compile Include="IStyle.cs" />
     <Compile Include="IStyleable.cs" />
     <Compile Include="Style.cs" />
     <Compile Include="StyleableUILabel.cs" />
-    <Compile Include="StyleManager.cs" />
-    <Compile Include="Stylesheet.cs" />
+    <Compile Include="IStylesheet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
