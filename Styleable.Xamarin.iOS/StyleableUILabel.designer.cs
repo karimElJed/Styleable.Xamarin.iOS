@@ -8,10 +8,10 @@ using Foundation;
 using System;
 using System.CodeDom.Compiler;
 
-namespace Styleable.Xamarin.iOS.TestApp
+namespace Styleable.Xamarin.iOS
 {
-    [Register ("ViewController")]
-    partial class ViewController
+    [Register ("StyleableUILabel")]
+    partial class StyleableUILabel
     {
         void ReleaseDesignerOutlets ()
         {

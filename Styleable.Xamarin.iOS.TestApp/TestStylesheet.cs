@@ -17,7 +17,7 @@ namespace Styleable.Xamarin.iOS.TestApp
             {
                 Stylings = new List<Action<StyleableUILabel>>
                 {
-                    l => l.BackgroundColor = UIColor.Blue,
+                    l => l.BackgroundColor = UIColor.Red,
                     l => l.TextColor = UIColor.White
                 }                
             });

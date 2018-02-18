@@ -19,8 +19,7 @@ namespace Styleable.Xamarin.iOS.TestApp
 
         public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
         {
-            // Override point for customization after application launch.
-            // If not required for your application you can safely delete this method
+            StyleManager.SetActiveStylesheet(new TestStylesheet());
 
             return true;
         }
